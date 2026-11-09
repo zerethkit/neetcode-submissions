@@ -1,7 +1,8 @@
 class Solution {
     public boolean isSubsequence(String s, String t) {
+        int n = s.length(), m = t.length();
         int i = 0, j = 0;
-        while (i < s.length() && j < t.length()) {
+        while (i < n && j < m) {
             if (s.charAt(i) == t.charAt(j)) {
                 i++;
                 j++;
@@ -9,8 +10,6 @@ class Solution {
                 j++;
             }
         }
-
-        return (i == s.length());
-        
+        return i == n;
     }
 }
